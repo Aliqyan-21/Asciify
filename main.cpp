@@ -6,7 +6,7 @@ const std::string ascii_chars = "@%#*+=-:. ";
 const size_t ascii_chars_size = ascii_chars.size();
 
 unsigned char adjustContrast(unsigned char value, float contrast) {
-  double new_value = ((((value / 255.0) - 0.5) * contrast) + 0.5) * 255;
+  float new_value = ((((value / 255.0) - 0.5) * contrast) + 0.5) * 255;
   return (new_value < 0) ? 0 : (new_value > 255) ? 255 : new_value;
 }
 
@@ -25,8 +25,8 @@ std::vector<unsigned char> rgbToGray(const kalam::Image &img, float contrast) {
   std::vector<unsigned char> grayScaleImage(width * height);
 
   for (int i = 0; i < height; i++) {
-    for (int j = 0; j < height; j++) {
-      int index = (j * width + i) * channels;
+    for (int j = 0; j < width; j++) {
+      int index = (i * width + j) * channels;
       unsigned char r = data[index];
       unsigned char g = data[index + 1];
       unsigned char b = data[index + 2];
@@ -36,7 +36,7 @@ std::vector<unsigned char> rgbToGray(const kalam::Image &img, float contrast) {
           static_cast<unsigned char>(0.299 * r + 0.587 * g + 0.114 * b);
 
       // make grayscale image
-      grayScaleImage[j * width + i] = adjustContrast(grayscale, contrast);
+      grayScaleImage[i * width + j] = adjustContrast(grayscale, contrast);
     }
   }
   return grayScaleImage;
@@ -47,7 +47,15 @@ void generateAscii(const kalam::Image &img, float contrast) {
   int width = img.getWidth();
   int height = img.getHeight();
 
-  std::vector<unsigned char> grayImage = rgbToGray(img, contrast);
+  std::vector<unsigned char> grayScaleImage = rgbToGray(img, contrast);
+
+  for (int i = 0; i < height; i++) {
+    for (int j = 0; j < width; j++) {
+      unsigned char brightness = grayScaleImage[i * width + j];
+      std::cout << mapToAscii(brightness);
+    }
+    std::cout << std::endl;
+  }
 }
 
 int main(int argc, char *argv[]) {
