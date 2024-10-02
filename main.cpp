@@ -49,7 +49,7 @@ void generateAscii(const kalam::Image &img, float contrast) {
 
   std::vector<unsigned char> grayScaleImage = rgbToGray(img, contrast);
 
-  for (int i = 0; i < height; i++) {
+  for (int i = 0; i < height; i += 2) {
     for (int j = 0; j < width; j++) {
       unsigned char brightness = grayScaleImage[i * width + j];
       std::cout << mapToAscii(brightness);
@@ -59,7 +59,7 @@ void generateAscii(const kalam::Image &img, float contrast) {
 }
 
 int main(int argc, char *argv[]) {
-  if (argc != 2) {
+  if (argc < 2) {
     std::cerr << "Usage: " << argv[0] << "<image_file>" << std::endl;
     exit(1);
   }
