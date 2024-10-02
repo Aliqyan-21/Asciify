@@ -82,6 +82,14 @@ g++ main.cpp -o main -lkalam
 
 Using my Kalam library for this project has made working with images significantly easier. Its intuitive API allows for quick implementation of complex image processing tasks without the overhead of managing low-level details. This ASCII art generator is just one of many possibilities, and I look forward to exploring more features of Kalam in future projects!
 
+## References
+
+These are some refs I used to make this project:
+
+- [https://medium.com/@vinaykattimani2/converting-an-rgb-image-to-a-grayscale-image-cd5b8f4ccf19](https://medium.com/@vinaykattimani2/converting-an-rgb-image-to-a-grayscale-image-cd5b8f4ccf19)
+- [https://www.geeksforgeeks.org/converting-image-ascii-image-python](https://www.geeksforgeeks.org/converting-image-ascii-image-python)
+- [https://math.stackexchange.com/questions/906240/algorithms-to-increase-or-decrease-the-contrast-of-an-image](https://math.stackexchange.com/questions/906240/algorithms-to-increase-or-decrease-the-contrast-of-an-image)
+
 ## License
 
 This project is licensed under the MIT License.
