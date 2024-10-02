@@ -4,7 +4,10 @@
 
 const std::string ascii_chars = "@%#*+=-:. ";
 
-unsigned char adjustContrast(unsigned char value, float contrast);
+unsigned char adjustContrast(unsigned char value, float contrast) {
+  double new_value = ((((value / 255.0) - 0.5) * contrast) + 0.5) * 255;
+  (new_value < 0) ? 0 : (new_value > 255) ? 255 : new_value;
+}
 
 char mapToAscii(unsigned char brightness);
 
