@@ -7,6 +7,8 @@ From way back I wanted to create this project, to convert image into ascii using
 But I was always failing and finding it hard to do, but I made kalam for simplifying image processing tasks and
 finally able to give life to this project in so few lines of code because of Kalam.
 
+[You can find kalam here](https://github.com/aliqyan-21/kalam)
+
 ## Overview
 
 The ASCII art maker takes an image file as input and converts it into an ASCII representation. This is achieved through a series of steps that involve loading the image, converting it to grayscale, adjusting contrast, and finally mapping pixel brightness to ASCII characters.
