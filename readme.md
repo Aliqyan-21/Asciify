@@ -31,16 +31,29 @@ The core functionalities are implemented in the following functions:
 
 <table>
   <tr>
+    <td align="center">Original Image</td>
+    <td align="center">ASCII Art</td>
+  </tr>
+  <tr>
     <td>
-      <img src="examples/cat.jpg" alt="Original Image" width="300"/>
+      <img src="examples/cat.jpg" alt="Original Image"/>
     </td>
     <td>
-      <img src="examples/catA.png" alt="ASCII Art" width="300" style="white-space: pre; font-family: monospace;"/>
+      <img src="examples/catA.png" alt="ASCII Art" , style="white-space: pre; font-family: monospace;"/>
     </td>
   </tr>
+
   <tr>
     <td align="center">Original Image</td>
     <td align="center">ASCII Art</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="examples/natsu.jpg" alt="Original Image"/>
+    </td>
+    <td>
+      <img src="examples/natsuA.png" alt="ASCII Art" , style="white-space: pre; font-family: monospace;"/>
+    </td>
   </tr>
 </table>
 
@@ -60,7 +73,7 @@ g++ main.cpp -o main -lkalam
 ./main <image_file> [contrast]
 ```
 
-- `<image_file>:` Path to the input image.
+- `<image_file>:` Path to the input image. (can take .png or .jpg/jpeg)
 - `[contrast]:` Optional contrast value (default is 1.5).
 
 ## Conclusion
