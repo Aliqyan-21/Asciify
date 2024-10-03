@@ -1,6 +1,6 @@
 # ASCII Art Maker
 
-This project is an ASCII art maker built using my own C++ library, **Kalam**.
+Asciify is an ASCII art generator built using my own C++ library, **Kalam**.
 The main objective of this project was to really see how Kalam is working properly and what it can do.
 
 From way back I wanted to create this project, to convert image into ascii using c++.
@@ -11,7 +11,7 @@ finally able to give life to this project in so few lines of code because of Kal
 
 ## Overview
 
-The ASCII art maker takes an image file as input and converts it into an ASCII representation. This is achieved through a series of steps that involve loading the image, converting it to grayscale, adjusting contrast, and finally mapping pixel brightness to ASCII characters.
+Asciify takes an image file as input and converts it into an ASCII representation. This is achieved through a series of steps that involve loading the image, converting it to grayscale, adjusting contrast, and finally mapping pixel brightness to ASCII characters.
 
 ### Features
 
@@ -61,7 +61,7 @@ The core functionalities are implemented in the following functions:
 
 ## Usage
 
-To run the ASCII art maker, follow these steps:
+To run the Asciify, follow these steps:
 
 1. **Compile the code:** Ensure that you have the `Kalam library` installed and properly linked in your project.
 
@@ -78,10 +78,6 @@ g++ main.cpp -o main -lkalam
 - `<image_file>:` Path to the input image. (can take .png or .jpg/jpeg)
 - `[contrast]:` Optional contrast value (default is 1.5).
 
-## Conclusion
-
-Using my Kalam library for this project has made working with images significantly easier. Its intuitive API allows for quick implementation of complex image processing tasks without the overhead of managing low-level details. This ASCII art generator is just one of many possibilities, and I look forward to exploring more features of Kalam in future projects!
-
 ## References
 
 These are some refs I used to make this project:
@@ -89,6 +85,10 @@ These are some refs I used to make this project:
 - [https://medium.com/@vinaykattimani2/converting-an-rgb-image-to-a-grayscale-image-cd5b8f4ccf19](https://medium.com/@vinaykattimani2/converting-an-rgb-image-to-a-grayscale-image-cd5b8f4ccf19)
 - [https://www.geeksforgeeks.org/converting-image-ascii-image-python](https://www.geeksforgeeks.org/converting-image-ascii-image-python)
 - [https://math.stackexchange.com/questions/906240/algorithms-to-increase-or-decrease-the-contrast-of-an-image](https://math.stackexchange.com/questions/906240/algorithms-to-increase-or-decrease-the-contrast-of-an-image)
+
+## Conclusion
+
+Using my Kalam library for this project has made working with images significantly easier. Its intuitive API allows for quick implementation of complex image processing tasks without the overhead of managing low-level details. This ASCII art generator is just one of many possibilities, and I look forward to exploring more features of Kalam in future projects!
 
 ## License
 
