@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <kalam.h>
 #include <vector>
@@ -7,7 +8,7 @@ const size_t ascii_chars_size = ascii_chars.size();
 
 unsigned char adjustContrast(unsigned char value, float contrast) {
   float new_value = ((((value / 255.0) - 0.5) * contrast) + 0.5) * 255;
-  return (new_value < 0) ? 0 : (new_value > 255) ? 255 : new_value;
+  return std::clamp(new_value, 0.f, 255.f);
 }
 
 char mapToAscii(unsigned char brightness) {
